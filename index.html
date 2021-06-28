@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Weather API</title>
+</head>
+<body>
+
+    <div id='container'>
+        <div id='weatherInfo'>
+            <div id='weatherInfo-city'>Fremont</div>
+            <div id='weatherInfo-icon'><img src='https://openweathermap.org/img/wn/04n@2x.png'></div>
+            <div id='weatherInfo-description'>Cloudy</div>
+            <div id='weatherInfo-temperature'>50 F</div>
+            <div id='searchBarContainer'>
+                <i class="fas fa-search fa-3x" id='searchIcon'></i>
+                <input type='text'class='hidden'>
+            </div>
+        </div>
+        <div id='temperature'>
+            <div id='sunrise' class='dataDiv'>
+                <i class="far fa-sun fa-2x icon"></i>
+                <span class='dataText'>Sunrise</span>
+                <span class='dataNumbers'>6:00pm</span>
+            </div>
+            <div id='sunset' class='dataDiv'>
+                <i class="fas fa-sun fa-2x icon"></i>
+                <span class='dataText'>Sunset</span>
+                <span class='dataNumbers'>6:00pm</span>
+            </div>
+            <div id='chanceOfRain' class='dataDiv'>
+                <i class="fas fa-cloud-showers-heavy fa-2x icon"></i>
+                <span class='dataText'>Chance of Rain</span>
+                <span class='dataNumbers'>50%</span>
+            </div>
+            <div id='humidity' class='dataDiv'>
+                <i class="fas fa-water fa-2x icon"></i>
+                <span class='dataText'>Humidity</span>
+                <span class='dataNumbers'>20%</span>
+            </div>
+            <div id='feelsLike' class='dataDiv'>
+                <i class="fas fa-thermometer fa-2x icon"></i>
+                <span class='dataText'>Feels Like</span>
+                <span class='dataNumbers'>4 mph</span>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src='script.js'></script>
+</body>
+</html>
