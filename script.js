@@ -38,7 +38,7 @@ searchBar.addEventListener('keyup', (event) => {
 })
 
 async function getWeather(city) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`)
     return response.json();
 }
 
