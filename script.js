@@ -33,6 +33,7 @@ searchBar.addEventListener('keyup', (event) => {
         getWeather(city).then(response => {
             console.log(response)
             setAll(response);
+            searchBar.value = '';
         });
     }
 })
