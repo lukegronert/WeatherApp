@@ -2,7 +2,7 @@ const api_key = '30303c4b0a5b602c9cdab00b9975eef4';
 const searchBar = document.querySelector('input');
 const searchIcon = document.querySelector('#searchIcon');
 
-const celcius = true;
+let celcius = true;
 
 const description = document.querySelector('#weatherInfo-description');
 const icon = document.querySelector('#weatherInfo-icon img');
@@ -14,6 +14,9 @@ const sunset = document.querySelector('#sunset .dataNumbers')
 const chanceOfRain = document.querySelector('#chanceOfRain .dataNumbers')
 const humidity = document.querySelector('#humidity .dataNumbers')
 const feelsLike = document.querySelector('#feelsLike .dataNumbers')
+
+const cSelector = document.querySelector('#c');
+const fSelector = document.querySelector('#f');
 
 getWeather('Taipei').then(response => {
     console.log(response)
@@ -36,6 +39,24 @@ searchBar.addEventListener('keyup', (event) => {
             searchBar.value = '';
         });
     }
+})
+
+cSelector.addEventListener('click', () => {
+    celcius = true;
+    cSelector.classList.add('selected');
+    fSelector.classList.remove('selected');
+    getWeather(cityName.textContent).then(response => {
+        setAll(response);
+    });
+})
+
+fSelector.addEventListener('click', () => {
+    celcius = false;
+    fSelector.classList.add('selected');
+    cSelector.classList.remove('selected');
+    getWeather(cityName.textContent).then(response => {
+        setAll(response);
+    });
 })
 
 async function getWeather(city) {

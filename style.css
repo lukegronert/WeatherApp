@@ -210,3 +210,22 @@ body {
     margin-top: 1vh;
   }
 }
+
+#modeSelector {
+  margin-top: 8vh;
+  font-weight: 800;
+}
+
+#modeSelector span {
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  #modeSelector {
+    margin-top: 4vh;
+  }
+}
+
+.selected {
+  color: gold;
+}
