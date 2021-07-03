@@ -18,11 +18,13 @@ const feelsLike = document.querySelector('#feelsLike .dataNumbers')
 const cSelector = document.querySelector('#c');
 const fSelector = document.querySelector('#f');
 
+//Fetches weather data for Taipei and displays info on page
 getWeather('Taipei').then(response => {
     console.log(response)
     setAll(response);
 });
 
+//When the search icon is clicked, the input slides into display
 searchIcon.addEventListener('click', () => {
     $(searchBar).animate({width: 'toggle', display: 'block'}, 300)
     setTimeout(() => {
@@ -30,6 +32,7 @@ searchIcon.addEventListener('click', () => {
     }, 300);
 })
 
+//On enter, fetch the info for value entered in the search bar and display it on page
 searchBar.addEventListener('keyup', (event) => {
     if(event.keyCode === 13) {
         const city = searchBar.value;
@@ -41,6 +44,7 @@ searchBar.addEventListener('keyup', (event) => {
     }
 })
 
+//When 'C' is clicked, show information in celcius
 cSelector.addEventListener('click', () => {
     celcius = true;
     cSelector.classList.add('selected');
@@ -50,6 +54,7 @@ cSelector.addEventListener('click', () => {
     });
 })
 
+//When 'F' is clicked, show info in fahrenheit
 fSelector.addEventListener('click', () => {
     celcius = false;
     fSelector.classList.add('selected');
