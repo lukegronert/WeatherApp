@@ -139,8 +139,8 @@ function setHumidity(response) {
 
 function setFeelsLike(response) {
     if(celcius) {
-        feelsLike.textContent = Number(response.main.temp - 273.15).toFixed(1) + '°C'
+        feelsLike.textContent = Number(response.main.feels_like - 273.15).toFixed(1) + '°C'
     } else {
-        feelsLike.textContent = ((response.main.temp - 273.15) * 9/5 + 32).toFixed(1) + '°F';
+        feelsLike.textContent = ((response.main.feels_like - 273.15) * 9/5 + 32).toFixed(1) + '°F';
     }
 }
